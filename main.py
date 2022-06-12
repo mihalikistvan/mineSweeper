@@ -1,2 +1,2 @@
-def func(): 
-   pass  
+def game(): 
+   return "game end"  
