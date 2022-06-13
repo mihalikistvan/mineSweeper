@@ -15,3 +15,8 @@
  as a user I want to be able to check if bomb is activated in a step
 - I want to check if coodrinate given is a bomb
 - If not a bomb I want to calculate the coordinate point
+
+## User story 
+ as a user I want to be able play a mineswweper game
+- I want to initiate a random play of minesweeper
+- Game always ends either as  win or lose

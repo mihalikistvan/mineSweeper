@@ -28,7 +28,7 @@ def decideIfBombOrPoints(coordinate,bombPlacement):
    if isinstance(coordinate, str) and isinstance(bombPlacement, list):
       return coordinate in bombPlacement
    return False
-   
+
 def decidePoints(coordinate,bombPlacement):
     bombPossiblities= {
         'A1':['A2','B1','B2'],'A2':['A1','A3','B1','B2','B3'],'A3':['A2','B2','B3'],
@@ -37,7 +37,39 @@ def decidePoints(coordinate,bombPlacement):
     }
     return (len(list(set(bombPossiblities[coordinate]).intersection(bombPlacement))))
 
+def game():
+   viewedTable= {
+        'A1':' ','A2':' ','A3':' ',
+        'B1':' ','B2':' ','B3':' ',
+        'C1':' ','C2':' ','C3':' '
+   }
+   print (printTable(viewedTable))
+   fullTable =['A1','A2','A3','B1','B2','B3','C1','C2','C3']
+   bombPlacement = setupBombs(3)
+   
+   remainingPlaces = fullTable
+   nonBomblist  = [x for x in fullTable if (x not in bombPlacement)]
+   
+   gameRunning = True
+   while gameRunning:
+      choice = random.choice(remainingPlaces)
+      remainingPlaces.remove(choice)
 
-def game(): 
-   return "game end"  
+      print ('choice: ',choice)
+      
+      if decideIfBombOrPoints(choice,bombPlacement):
+         viewedTable[choice] = 'X'
+         print (printTable(viewedTable))
+         print ('game Over bombs were at:' , bombPlacement)
+         gameRunning = False
+      else:
+         nonBomblist.remove(choice)
+         viewedTable[choice] = decidePoints(choice,bombPlacement)
+         print (printTable(viewedTable))
+      if len(nonBomblist) == 0:
+         print ('You win')
+         gameRunning = False
+            
+   return 'game end'
 
+print (game())

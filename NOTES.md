@@ -23,4 +23,6 @@ Pomodoro 3
 
 Pomodoro 4 
  
--
+- game user story written
+- fourth feature added
+- game logic written
