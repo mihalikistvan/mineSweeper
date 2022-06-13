@@ -15,7 +15,11 @@ Pomodoro 2
 
 Pomodoro 3 
  
--
+- third user story for deciding points written
+- third feature added
+- function to decide if bomb/not bomb
+- function to decide points if not points
+- tests for valid inputs, and different bomb placements
 
 Pomodoro 4 
  

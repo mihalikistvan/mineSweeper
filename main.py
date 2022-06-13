@@ -24,6 +24,20 @@ def setupBombs(numOfBombs):
          return bombPlacement
    return 'wrong input'
 
+def decideIfBombOrPoints(coordinate,bombPlacement):
+   if isinstance(coordinate, str) and isinstance(bombPlacement, list):
+      return coordinate in bombPlacement
+   return False
+   
+def decidePoints(coordinate,bombPlacement):
+    bombPossiblities= {
+        'A1':['A2','B1','B2'],'A2':['A1','A3','B1','B2','B3'],'A3':['A2','B2','B3'],
+        'B1':['A1','A2','B2','C1','C2'],'B2':['A1','A2','A3','B1','B3','C1','C2','C3'],'B3':['A2','A3','B2','C2','C3'],
+        'C1':['B1','B2','C2'],'C2':['B1','B2','B3','C1','C3'],'C3':['B2','B3','C2']
+    }
+    return (len(list(set(bombPossiblities[coordinate]).intersection(bombPlacement))))
+
+
 def game(): 
    return "game end"  
 

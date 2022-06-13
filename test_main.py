@@ -50,3 +50,15 @@ def test():
     assert len(setup3)  == 8
     assert len(setup3)  == len(set(setup3))
     assert setup4  == 'wrong input'
+
+    ### point system
+    assert decideIfBombOrPoints('A2',['A2','B1','B2']) == True
+    assert decideIfBombOrPoints('A1',['A2','B1','B2']) == False
+    assert decideIfBombOrPoints('A1',[]) == False
+    assert decideIfBombOrPoints(12,['A2','B1','B2']) == False
+    assert decideIfBombOrPoints('A2',['A2']) == True
+
+    assert decidePoints('A1',['A2','B1','B2']) == 3
+    assert decidePoints('A2',['C1','C2','C3']) == 0
+    assert decidePoints('B2',['A1','C2','C3']) == 3
+    assert decidePoints('B2',['C1','C2','C3']) == 3
