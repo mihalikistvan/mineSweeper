@@ -1,5 +1,7 @@
 # mineSweeper 
+
+
 ## User story 
- a user, I have to know if the input is valid 
-- User test 1/1: It should be false if 
-- User test 1/2: It should be false if 
+ as a user I want to view the table that is being played
+- If a new game is initiated i want to see an empty board
+- If a game is allready running with steps done I want to see the points of each cells 
