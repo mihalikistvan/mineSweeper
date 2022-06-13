@@ -23,18 +23,18 @@ def test():
     assert printTable(viewedTable0) == 'wrong input'
     assert printTable(viewedTable1) == 'wrong input'
     assert printTable(viewedTable2) == "+-+-+-+ \n" \
-        f"| | | | \n" \
+        "| | | | \n" \
         "+-+-+-+ \n" \
-        f"| | | | \n" \
+        "| | | | \n" \
         "+-+-+-+ \n" \
-        f"| | | | \n" \
+        "| | | | \n" \
         "+-+-+-+"
     assert printTable(viewedTable3) == "+-+-+-+ \n" \
-        f"|1|1|1| \n" \
+        "|1|1|1| \n" \
         "+-+-+-+ \n" \
-        f"|1| |1| \n" \
+        "|1| |1| \n" \
         "+-+-+-+ \n" \
-        f"|1|1|1| \n" \
+        "|1|1|1| \n" \
         "+-+-+-+"
 
     # bomb setup

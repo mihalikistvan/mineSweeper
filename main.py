@@ -36,9 +36,15 @@ def decideIfBombOrPoints(coordinate, bombPlacement):
 
 def decidePoints(coordinate, bombPlacement):
     bombPossiblities = {
-        'A1': ['A2', 'B1', 'B2'], 'A2': ['A1', 'A3', 'B1', 'B2', 'B3'], 'A3': ['A2', 'B2', 'B3'],
-        'B1': ['A1', 'A2', 'B2', 'C1', 'C2'], 'B2': ['A1', 'A2', 'A3', 'B1', 'B3', 'C1', 'C2', 'C3'], 'B3': ['A2', 'A3', 'B2', 'C2', 'C3'],
-        'C1': ['B1', 'B2', 'C2'], 'C2': ['B1', 'B2', 'B3', 'C1', 'C3'], 'C3': ['B2', 'B3', 'C2']
+        'A1': ['A2', 'B1', 'B2'],
+        'A2': ['A1', 'A3', 'B1', 'B2', 'B3'],
+        'A3': ['A2', 'B2', 'B3'],
+        'B1': ['A1', 'A2', 'B2', 'C1', 'C2'],
+        'B2': ['A1', 'A2', 'A3', 'B1', 'B3', 'C1', 'C2', 'C3'],
+        'B3': ['A2', 'A3', 'B2', 'C2', 'C3'],
+        'C1': ['B1', 'B2', 'C2'],
+        'C2': ['B1', 'B2', 'B3', 'C1', 'C3'],
+        'C3': ['B2', 'B3', 'C2']
     }
     return (len(list(set(bombPossiblities[coordinate]).intersection(bombPlacement))))
 
