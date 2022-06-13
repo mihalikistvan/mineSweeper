@@ -2,7 +2,7 @@ from main import *
 
 def test():
     ### game
-    assert game() == "test"
+    assert game() == "game end"
     
     ### table printing
     viewedTable0= ''
