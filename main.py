@@ -1,3 +1,5 @@
+import random
+
 def printTable(tableDict):
    try:
       return "+-+-+-+ \n" \
@@ -9,6 +11,18 @@ def printTable(tableDict):
              "+-+-+-+"
    except:
       return 'wrong input'
+
+def setupBombs(numOfBombs):
+   if isinstance(numOfBombs, int):
+      possibleBombs = ['A1','A2','A3','B1','B2','B3','C1','C2','C3']
+      bombPlacement = []
+      if numOfBombs <= len(possibleBombs):
+         for i in range (0,numOfBombs):
+            bomb = random.choice(possibleBombs)
+            possibleBombs.remove(bomb)
+            bombPlacement.append(bomb)
+         return bombPlacement
+   return 'wrong input'
 
 def game(): 
    return "game end"  

@@ -1,10 +1,10 @@
 from main import * 
 
 def test():
-    #game
+    ### game
     assert game() == "game end"
     
-    #table printing
+    ### table printing
     viewedTable0= ''
     viewedTable1= {
             'A1':' ','A2':' ','A3':' '
@@ -35,3 +35,18 @@ def test():
                                         "+-+-+-+ \n" \
                                         f"|1|1|1| \n" \
                                         "+-+-+-+"
+
+    ### bomb setup
+    setup0 =setupBombs('testForWrongInput')
+    setup1 =setupBombs(1)
+    setup2 =setupBombs(3)
+    setup3 =setupBombs(8)
+    setup4 =setupBombs(12)
+
+    assert setup0  == 'wrong input'
+    assert len(setup1)  == 1
+    assert len(setup2)  == 3
+    assert len(setup2)  == len(set(setup2))
+    assert len(setup3)  == 8
+    assert len(setup3)  == len(set(setup3))
+    assert setup4  == 'wrong input'
