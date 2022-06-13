@@ -1,4 +1,4 @@
-from main import *
+from main import game, printTable, setupBombs, decideIfBombOrPoints, decidePoints
 
 
 def test():

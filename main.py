@@ -10,7 +10,8 @@ def printTable(tableDict):
                "+-+-+-+ \n" \
                f"|{tableDict['C1']}|{tableDict['C2']}|{tableDict['C3']}| \n" \
                "+-+-+-+"
-    except:
+    except Exception as e:
+        print(e)
         return 'wrong input'
 
 
