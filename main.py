@@ -84,5 +84,3 @@ def game():
 
     return 'game end'
 
-
-print(game())
